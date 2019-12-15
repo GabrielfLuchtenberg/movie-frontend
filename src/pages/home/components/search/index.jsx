@@ -8,7 +8,7 @@ const Search = ({ onChange }) => {
   }
 
   return (
-    <div className="search-container mb-4 mt-4">
+    <div className="search-container pb-4 pt-2 sticky-top">
       <form onSubmit={handleSearch} className="d-flex w-100">
         <div className="input-group">
           <input
