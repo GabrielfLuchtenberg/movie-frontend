@@ -11,12 +11,13 @@ const Pagination = ({ page, onPageChange }) => {
     onPageChange(intPage - 1);
   }
   return (
-    <nav aria-label="Page navigation example">
+    <nav aria-label="Page navigation">
       <ul className="pagination">
         <li className="page-item">
           <button
             className="page-link"
             onClick={previousPage}
+            disabled={page - 1 < 1}
             data-testid="previous-page"
           >
             Previous
