@@ -12,16 +12,11 @@ let mock;
 describe("HomePage", () => {
   const createWrapper = () => {
     const history = createMemoryHistory();
-    let wrapper;
-    act(() => {
-      wrapper = render(
-        <Router history={history}>
-          <HomePage />
-        </Router>
-      );
-    });
-
-    return wrapper;
+    return render(
+      <Router history={history}>
+        <HomePage />
+      </Router>
+    );
   };
 
   beforeEach(() => {
