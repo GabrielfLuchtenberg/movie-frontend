@@ -8,16 +8,24 @@
 
 body {
   margin: 0;
-  background: $background;
+  background: white;
   display: flex;
   padding: 0;
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
+
+  background: $primary;
 }
 
 #root {
   display: flex;
   width: 100%;
   min-height: 100vh;
+}
+
+span,
+label,
+p {
+  color: $color;
 }

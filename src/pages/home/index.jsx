@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Loading } from "../../ui/loading";
 import { Pagination } from "../../components/pagination";
 import { MoviesContainer } from "./components/movies-container";
-import { Search } from "./components/search";
 import { movieApi } from "../../services/movie";
+import { Search } from "./components/search";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -28,15 +28,13 @@ const HomePage = () => {
   }
 
   return (
-    <div className="container home">
-      <div className="row">
-        <Search onChange={setName} />
-      </div>
+    <div className="container d-flex flex-column">
+      <Search onChange={setName} />
       {loading ? (
         <Loading />
       ) : (
         <>
-          <div className="row">
+          <div className="row justify-content-center">
             <MoviesContainer movies={movies} loading={loading} />
           </div>
           <div className="row">
