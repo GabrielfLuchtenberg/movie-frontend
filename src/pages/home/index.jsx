@@ -37,10 +37,8 @@ const HomePage = () => {
           <div className="row justify-content-center">
             <MoviesContainer movies={movies} loading={loading} />
           </div>
-          <div className="row">
-            <div className="col-12">
-              <Pagination page={page} onPageChange={handlePageChange} />
-            </div>
+          <div className="d-flex justify-content-center">
+            <Pagination page={page} onPageChange={handlePageChange} />
           </div>
         </>
       )}
