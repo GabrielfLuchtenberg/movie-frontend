@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Loading } from "../../ui/loading";
-import { api } from "../../api";
 import { Pagination } from "../../components/pagination";
 import { MoviesContainer } from "./components/movies-container";
+import { movieApi } from "../../services/movie";
 import { Search } from "./components/search";
 
 const HomePage = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [limit] = useState(18);
   const [page, setPage] = useState(1);
@@ -15,11 +15,8 @@ const HomePage = () => {
   useEffect(() => {
     async function fetch() {
       setLoading(true);
-      const response = await api.get("/v1/movie/upcoming", {
-        params: { page, limit, name }
-      });
-      const { data } = response;
-      setMovies(data.results);
+      const upcomingMovies = await movieApi.list({ page, limit, name });
+      setMovies(upcomingMovies.results);
       setLoading(false);
     }
 
@@ -31,15 +28,13 @@ const HomePage = () => {
   }
 
   return (
-    <div className="container home">
-      <div className="row">
-        <Search onChange={setName} />
-      </div>
+    <div className="container d-flex flex-column">
+      <Search onChange={setName} />
       {loading ? (
         <Loading />
       ) : (
         <>
-          <div className="row">
+          <div className="row justify-content-center">
             <MoviesContainer movies={movies} loading={loading} />
           </div>
           <div className="row">

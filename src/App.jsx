@@ -2,12 +2,14 @@ import React from "react";
 import "./App.scss";
 import { HomePage } from "./pages/home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { MovieDetails } from "./pages/details";
+
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/movie/:id">
-          <h1>movie</h1>
+          <MovieDetails />
         </Route>
         <Route path="/">
           <HomePage />

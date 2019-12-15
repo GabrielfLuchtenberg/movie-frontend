@@ -10,7 +10,7 @@ const MoviesContainer = ({ movies, loading }) => {
   return (
     <>
       {movies.map(movie => (
-        <div className="col col-md-6 col-lg-4 mb-4" key={movie.id}>
+        <div className="ml-2 mr-2 mb-4" key={movie.id}>
           <MovieCard key={movie.id + movie.name} movie={movie} />
         </div>
       ))}
