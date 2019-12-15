@@ -24,8 +24,18 @@ describe("HomePage", () => {
     mock.onGet(/movie\/upcoming/).reply(200, {
       page: 1,
       results: [
-        { id: 1, name: "Frozen II", posters: ["123", "1234"] },
-        { id: 2, name: "Star wars", posters: ["123", "1234"] }
+        {
+          id: 1,
+          name: "Frozen II",
+          posters: ["123", "1234"],
+          genres: [{ id: 1, name: "Adventure" }]
+        },
+        {
+          id: 2,
+          name: "Star wars",
+          posters: ["123", "1234"],
+          genres: [{ id: 1, name: "Adventure" }]
+        }
       ]
     });
   });
@@ -35,8 +45,18 @@ describe("HomePage", () => {
     mock.onGet(/upcoming/).reply(200, {
       page: 1,
       results: [
-        { id: 1, name: "Frozen II", posters: ["123", "1234"] },
-        { id: 2, name: "Star wars", posters: ["123", "1234"] }
+        {
+          id: 1,
+          name: "Frozen II",
+          posters: ["123", "1234"],
+          genres: [{ id: 1, name: "Adventure" }]
+        },
+        {
+          id: 2,
+          name: "Star wars",
+          posters: ["123", "1234"],
+          genres: [{ id: 1, name: "Adventure" }]
+        }
       ]
     });
 
