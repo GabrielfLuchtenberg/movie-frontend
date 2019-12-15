@@ -39,7 +39,6 @@ const MovieDetails = () => {
           onClick={goBackToList}
           data-testid="go-to-list"
         >
-          <i class="fas fa-long-arrow-alt-left"></i>
           <FontAwesomeIcon icon={faLongArrowAltLeft} />
         </button>
       </div>
