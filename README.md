@@ -8,14 +8,14 @@ node 12+
 
 The app is up and running on localhost:3000 ! :D
 
-## Architeture
+## Architecture
 
-I've split the application in four main folders.
+I've split the application into four main folders.
 
-1. The **components** contains the reusable components that have some kind of interation.
-2. The **pages** contain the composition of components to create the interface. Inside the pages you're able to create another components folder, that has components that work on the context of that page.
-3. **services** is responsible for maintaining specific logic as resources from api
-4. **UI** has the reusable components that doesn't have interation, just style.
+1. The **components** contains the reusable components that have some kind of interaction.
+2. The **pages** contain the composition of components to create the interface. Inside the pages, you're able to create another component folder, that has components that work on the context of that page.
+3. **services** is responsible for maintaining specific logic as resources from API
+4. **UI** has the reusable components that don't have interaction, just styles.
 
 ## Assumptions
 
