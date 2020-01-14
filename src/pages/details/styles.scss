@@ -1,0 +1,17 @@
+.nav-container button {
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.23);
+}
+.movie-container > * {
+  box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.36);
+}
+.movie-info {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.card-title {
+  display: block;
+  small {
+    font-size: 1.25rem;
+    display: block;
+  }
+}
